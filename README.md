@@ -58,6 +58,6 @@ Lane Detection inside a tunnel                  |  Failed Lane Detection in low 
 
 ## Video Demonstration
 
-This video was recorded on the campus of Worcester Polytechnic Institute. The results (i.e Lane Detection) are not accurate because the model was tested only after training it for 2 epochs. 
+This video was recorded on the campus of Worcester Polytechnic Institute. The results (i.e Lane Detection) are not accurate because the model was tested only after training it for 3 epochs. 
 
 <img src="images/WPI_campus.gif" width="640"> 
