@@ -15,6 +15,24 @@ Detailed imformation about the dataset and it's augmentation process can be foun
 
 The dataset can be downloaded from https://drive.google.com/drive/folders/1MI5gMDspzuV44lfwzpK6PX0vKuOHUbb_?usp=sharing
 
+#### The dataset folder should have following structure:
+ 
+ * dataset
+   * trainset
+     *  trainset
+        * image
+        * truth
+     *  train_index.txt
+     *  val_index.txt     
+   * testset
+     * image
+     * truth
+     * test_index_0530.txt
+     * test_index_0531.txt 
+     * test_index_0601.txt
+   
+*Note* - If you have different folder structure, you will need to adjust the paths accordingly.
+
 ## Scripts
 
 1. config.py    - This file define the parameters, settings and preferences utilized by the network.
@@ -23,3 +41,17 @@ The dataset can be downloaded from https://drive.google.com/drive/folders/1MI5gM
 4. model_GRU.py - This file implements ST-RNN module (ConvGRU) sandwiched between encoder-decoder structure. SCNN module is inserted in the encoder.
 5. train.py     - This file trains and validate the model using training and validation dataset respectievely.
 6. test.py      - This file test the model on the testing dataset.
+
+
+
+## Results
+
+The figure below shows the detection of Lane in different conditions:
+
+Lane Detection in Normal Condition              |  Lane Detection under Occlusion
+:----------------------------------------------:|:------------------------------------------------:
+<img src="images/result4.jpg" width="480">      |  <img src="images/result3.jpg" width="480">
+
+Lane Detection inside a tunnel                  |  Failed Lane Detection in low lightning condition
+:----------------------------------------------:|:------------------------------------------------:
+<img src="images/result1.jpg" width="480">      |  <img src="images/result5.jpg" width="480">
